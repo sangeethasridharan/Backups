@@ -1,0 +1,20 @@
+package list;
+
+import java.util.ArrayList;
+import java.util.Vector;
+
+public class List {
+	public static void main (String ar[])
+	{
+		Vector<String> v = new Vector<String>();
+		v.add("addition");
+		v.add("subtraction");
+		v.add("multiplication");
+		v.add("division");
+		ArrayList<String> al = new ArrayList<String>(v);
+		System.out.println(al);
+		al.remove(3);
+		System.out.println(al);
+	}
+
+}

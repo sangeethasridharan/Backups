@@ -1,0 +1,28 @@
+package servlet;
+
+import java.io.*;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.*;
+
+@SuppressWarnings("serial")
+public class RememberMeServlet extends HttpServlet {
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		resp.setContentType("text/html");
+		PrintWriter out = resp.getWriter();
+		Cookie[] ck1 = req.getCookies();
+			
+			if(ck1 != null) {
+			          Cookie cookie = ck1[0];
+			          out.println("Welcome Back!!!  "+cookie.getValue());
+			          RequestDispatcher rd = req.getRequestDispatcher("/profile.html");
+				      rd.include(req, resp);
+			       
+			}
+			else
+			{
+				resp.sendRedirect("index.jsp");
+			}	
+	}
+}

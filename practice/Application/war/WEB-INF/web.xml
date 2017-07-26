@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>ContactServlet</servlet-name>
+		<servlet-class>servlet.ContactServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ContactServlet</servlet-name>
+		<url-pattern>/servlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateContacts</servlet-name>
+		<servlet-class>servlet.UpdateContacts</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateContacts</servlet-name>
+		<url-pattern>/update</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeleteContacts</servlet-name>
+		<servlet-class>servlet.DeleteContacts</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteContacts</servlet-name>
+		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SearchContact</servlet-name>
+		<servlet-class>servlet.SearchContact</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchContact</servlet-name>
+		<url-pattern>/search</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ShowContact</servlet-name>
+		<servlet-class>servlet.ShowContact</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowContact</servlet-name>
+		<url-pattern>/show</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Utils</servlet-name>
+		<servlet-class>helper.Utils</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Utils</servlet-name>
+		<url-pattern>/utils</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>view.html</welcome-file>
+	</welcome-file-list>
+</web-app>

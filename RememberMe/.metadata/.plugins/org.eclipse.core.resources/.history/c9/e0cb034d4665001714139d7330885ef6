@@ -1,0 +1,59 @@
+package servlet;
+import java.io.*;
+
+import javax.servlet.http.*;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.util.*;
+
+@SuppressWarnings("serial")
+public class RememberMeServlet extends HttpServlet {
+	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		resp.setContentType("text/html");
+		PrintWriter out = resp.getWriter();
+		
+		String s = "";
+		StringBuffer jb = new StringBuffer();
+		  String line = null;
+		  try {
+		    BufferedReader reader = req.getReader();
+		    while ((line = reader.readLine()) != null)
+		       jb.append(line);
+		       s = jb.toString();
+		  } catch (Exception e) { }
+		
+		
+		System.out.println(s);
+		ObjectMapper obj = new ObjectMapper();
+		Map<String, String> map = obj.readValue(s, new TypeReference<Map<String,String>>(){});
+		
+		String email = map.get("emailId");
+		System.out.println(email);
+		String password = map.get("pwd");
+		
+		if(email != "null" && password != "null")
+		{
+			
+			Cookie ck = new Cookie("token",email);
+			ck.setMaxAge(365 * 24 * 60 * 60);
+			resp.addCookie(ck);
+			out.println(ck);
+			
+			Cookie[] ck1 = req.getCookies();
+			
+			if(ck1 != null) {
+			      for (int i = 0; i < ck1.length; i++) {
+			          ck=ck1[i];
+			          String cookieName = ck.getName();
+			          String cookieValue = ck.getValue();
+			       }
+		}
+		else
+		{
+			out.println("Enter credentials");
+		}
+		
+	}
+}

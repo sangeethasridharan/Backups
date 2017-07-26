@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.DataOutputStream"/>
+<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
+<fullyQualifiedTypeName name="beans.PojoTokenAccess"/>
+<fullyQualifiedTypeName name="com.google.appengine.labs.repackaged.org.json.JSONObject"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.core.type.TypeReference"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="javax.jdo.annotations.PersistenceCapable"/>
+<fullyQualifiedTypeName name="javax.jdo.PersistenceManager"/>
+<fullyQualifiedTypeName name="helper.PMF"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

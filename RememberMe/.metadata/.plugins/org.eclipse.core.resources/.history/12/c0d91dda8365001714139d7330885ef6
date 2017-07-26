@@ -1,0 +1,11 @@
+<html>
+
+<head>
+
+<title>Profile</title>
+</head>
+
+<body>
+<button type="button" class="btn btn-default" onClick="logoutFunc()">SignIn</button>
+</body>
+</html>

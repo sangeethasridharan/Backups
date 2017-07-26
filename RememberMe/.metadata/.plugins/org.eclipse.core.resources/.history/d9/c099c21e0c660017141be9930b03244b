@@ -1,0 +1,13 @@
+<html>
+
+<head>
+
+<title>Profile</title>
+</head>
+
+<body>
+<form id="log" style="visibility:visible">
+<button type="button" class="btn btn-default" onClick="logoutFunc()">Logout</button>
+</form>
+</body>
+</html>

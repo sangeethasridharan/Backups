@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="	text/html; charset=UTF-8">
+    
+    <title>View</title>
+    
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="display.js?id=2"></script>
+
+
+<script>
+
+function newWin() {
+	var visi = window.name;
+	visi = document.getElementById("det").style.visibility='visible';
+    var myWindow = window.open("visi", "MsgWindow", "width=200,height=100");   
+}
+
+
+</script>
+  </head>
+  
+  <body>
+  
+  <input type="submit" value="PersonalDetails" id="but" onClick="newWin()"/><br> 
+  <input type="submit" value="CONTACTS" id="butt" style="visibility:visible" onClick="showAll()"/><br> 
+  
+    
+  <form id="det" style="visibility:hidden">
+    <div id="imgDiv" style="margin:5px; float:left; width:200px; height:200px; background-color:green;">
+    
+    </div>
+    <div id="personalDetail" style=" float:left;  width:500px; height:500px; background-color:red;">
+    <h1>PersonalData</h1>
+    
+    ID : <label id="id"></label><br>
+    Email : <label id="email"> </label><br>
+    Name : <label id="name"></label><br>
+    FirstName : <label id="fname"></label><br>
+    LastName : <label id="lname"></label><br>
+    <label id="link"></label>
+    </div>
+   </form>
+    
+    <form id="allContact" style="visibility:hidden">
+    <span class="label label-default">CONTACTS</span>
+        <form>
+        <p id="process"></p>
+        
+        <p id="names"></p>
+        
+        
+        <button type="button"  onClick="displayfunc()">New Contacts </button><br>
+        <span id="alert"></span>
+        
+        <button type="button"  onClick="postInfo()">Save </button><br>
+        <h1>SearchName</h1>
+        Enter name to Search<input type="text" id = "se" >
+        <input type=button onclick="search()" value="SearchName">
+        
+        <input type=button onClick="showContact()" value="Show Contacts">
+        
+        <p id="test"></p>
+ 
+        <table class="table" align="center">
+        <tr>
+        <th id="dthc" style="visibility:hidden">Contacts</th>
+        
+        <th id="dth" align="right" style="visibility:hidden">Details</th>
+        </tr>
+        <tr>
+        <td>
+        <p id="list"></p>
+        </td>
+        
+        <td id="dtd" style="visibility:hidden">
+        <label><h4>Title :</h4></label>
+        <input type="text" id="tit"/><br>
+        <label><h4>FirstName :</h4></label>
+        <input type="text" id="fna"/><br>
+        <label><h4>LastName :</h4></label>
+        <input type="text" id="lna"/><br>
+        
+        <input type="button" value="UPDATE" onClick="updatevalues()" id="ubtn"/>
+        <input type="button" value="SUBMIT" onClick="update()" id="ubtn1" style="visibility:hidden"/>
+        <input type="button" value="DELETE" onClick="deleteconc()"/>
+        </td>
+        </tr>
+        </table>
+        </form>
+        
+        <span id="err" style="visibility:hidden"></span>
+        <p id="deletealert"></p>
+        <form id="form" style="visibility:hidden">
+        <h1>DETAILS</h1>
+        <label><h4>Title :</h4></label>
+        <label id="ti"></label><br>
+        <label><h4>FirstName :</h4></label>
+        <label id="fn"></label><br>
+        <label><h4>LastName :</h4></label>
+        <label id="ln"></label>
+        </form>
+    
+  </form>
+ 
+  
+  </body>
+  </html>

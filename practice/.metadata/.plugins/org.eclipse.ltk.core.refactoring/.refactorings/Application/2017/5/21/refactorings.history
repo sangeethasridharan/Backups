@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;servlet.UpdateContact&apos; to &apos;ShowContact&apos;&#x0D;&#x0A;- Original project: &apos;Application&apos;&#x0D;&#x0A;- Original element: &apos;servlet.UpdateContact&apos;&#x0D;&#x0A;- Renamed element: &apos;servlet.ShowContact&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;UpdateContact&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;servlet{UpdateContact.java[UpdateContact" matchStrategy="1" name="ShowContact" qualified="false" references="true" similarDeclarations="false" stamp="1495620094251" textual="false" version="1.0"/>
+</session>

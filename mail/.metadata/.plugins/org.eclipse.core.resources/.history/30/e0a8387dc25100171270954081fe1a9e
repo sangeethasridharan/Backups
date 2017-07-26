@@ -1,0 +1,52 @@
+package com;
+import java.util.Properties;  
+import javax.mail.*;  
+import javax.mail.internet.*;  
+  
+
+public class SendMail {
+	
+	
+	
+	public String mail() {  
+		  
+		String host = "smtp.gmail.com";
+		String from = "sangeetha.sridharan93@gmail.com";
+		String pass = "sangissk@yahoo.in";
+		Properties props = System.getProperties();
+		props.put("mail.smtp.starttls.enable", "true"); // added this line
+		props.put("mail.smtp.host", host);
+		props.put("mail.smtp.user", from);
+		props.put("mail.smtp.password", pass);
+		props.put("mail.smtp.port", "587");
+		props.put("mail.smtp.auth", "true");
+
+		// Get the default Session object.
+		Session session = Session.getDefaultInstance(props, null);
+
+		try {
+		    // Create a default MimeMessage object.
+		    MimeMessage message = new MimeMessage(session);
+
+		    // Set sender
+		    message.setFrom(new InternetAddress("sangeetha.sridharan93@gmail.com"));
+
+		    // Set recipient
+		    message.addRecipient(Message.RecipientType.TO, new InternetAddress("sangeetha.sridharan@conversionsupport.com"));
+
+		    // Set Subject: header field
+		    message.setSubject("SUBJECT");
+
+		    // set content and define type
+		    message.setContent("CONTENT", "text/html; charset=utf-8");
+
+		    Transport transport = session.getTransport("smtp");
+		    transport.connect(host, from, pass);
+		    transport.sendMessage(message, message.getAllRecipients());
+		    transport.close();
+		  } catch (MessagingException mex) {
+		    System.out.println(mex.getLocalizedMessage());
+		} 
+	return "done";
+	}
+}

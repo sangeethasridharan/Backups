@@ -1,0 +1,23 @@
+package list;
+
+import java.util.*;
+
+public class List {
+	@SuppressWarnings("unchecked")
+	public static void main (String ar[])
+	{
+		Vector<String> v = new Vector<String>();
+		v.add("addition");
+		v.add("subtraction");
+		v.add("multiplication");
+		v.add("division");
+		ArrayList<String> al = new ArrayList<String>(v);
+		System.out.println(al);
+		al.remove(3);
+		System.out.println(al);
+		List l1 = (List) Collections.synchronizedList(al);
+		System.out.println(al);
+		
+	}
+
+}

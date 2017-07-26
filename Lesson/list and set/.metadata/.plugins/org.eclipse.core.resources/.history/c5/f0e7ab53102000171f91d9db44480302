@@ -1,0 +1,75 @@
+package list;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.EmptyStackException;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
+import java.util.Vector;
+
+class Example1 {
+
+	public void arrVec() {
+
+	
+		Vector<String> v = new Vector<String>();
+		v.add("addition");
+		v.add("subtraction");
+		v.add("multiplication");
+		v.add("division");
+		ArrayList<String> al = new ArrayList<String>(v);
+		System.out.println(al);
+		al.remove(3);
+		System.out.println(al);
+		List<String> l1 = Collections.synchronizedList(al);
+		l1.add("Division");
+		System.out.println(l1);
+	}
+	
+	static void showpush(Stack<Integer> st, int a)
+	{
+		System.out.println("stack: " + st); 
+		st.push(new Integer(a)); 
+		System.out.println("push(" + a + ")"); 
+		System.out.println("stack: " + st); 
+		showpush(st, 42); 
+		showpush(st, 66); 
+		showpush(st, 99); 
+	} 
+	
+	static void showpop(Stack<Integer> st) 
+	{ 
+			System.out.print("pop -> "); 
+			Integer a = (Integer) st.pop(); 
+			System.out.println(a); 
+			System.out.println("stack: " + st); 
+			showpop(st); 
+			showpop(st); 
+			showpop(st);
+			
+			try { 
+				showpop(st); 
+				} catch (EmptyStackException e) { 
+				System.out.println("empty stack"); 
+				} 
+	} 
+	
+	
+	
+	
+	 
+	
+		
+		LinkedList<Integer> ll = new LinkedList<Integer>(s); 
+	}
+
+public class Example
+{
+	public static void main(String ar[])
+	{
+		Example1 e = new Example1();
+		e.arrVec();
+		
+	}
+}

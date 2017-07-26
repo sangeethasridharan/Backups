@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;jdoex&apos; to &apos;practice/src/jdoex&apos;&#x0D;&#x0A;- Original project: &apos;JDO_EX&apos;&#x0D;&#x0A;- Destination element: &apos;practice/src/jdoex&apos;&#x0D;&#x0A;- Original element: &apos;JDO_EX/src/jdoex&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=practice/src&lt;jdoex" element1="/src&lt;jdoex" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1494582039819" version="1.0"/>
+</session>
